@@ -20,7 +20,6 @@ public class Passaro : MonoBehaviour
     }
     void impulsionar()
     {
-        this.fisica.AddForce(Vector2.up*3,
-            ForceMode2D.Impulse);
+        this.fisica.AddForce(Vector2.up*3,ForceMode2D.Impulse);
     }
 }
