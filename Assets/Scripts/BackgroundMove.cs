@@ -22,7 +22,7 @@ public class BackgroundMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float deslocamento = Mathf.Repeat(this.velocidade * Time.time, imageSize);
+        float deslocamento = Mathf.Repeat(this.velocidade * Time.time, realSize);
         this.transform.position = this.posI + Vector3.left * deslocamento;
     }
 }
