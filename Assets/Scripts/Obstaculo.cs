@@ -2,28 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obistaculoscript : MonoBehaviour
+public class obstaculo : MonoBehaviour
 {
+    [SerializeField]    
+    private float velocidade = 0.8f;
     [SerializeField]
-    private float velocidade = 0.7f;
+    private float variaçãoPosiçãoY;
+    // Update is called once per frame
 
-    [SerializeField]
-    private float variacaoPosY;
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         
     }
 
     private void Awake()
     {
-        this.transform.Translate(Vector3.up * Random.Range(-variacaoPosY, variacaoPosY));
+        this.transform.Translate(Vector3.up * Random.Range(-variaçãoPosiçãoY, variaçãoPosiçãoY));        
     }
-
-    // Update is called once per frame
     void Update()
     {
         this.transform.Translate(Vector3.left * velocidade * Time.deltaTime);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
