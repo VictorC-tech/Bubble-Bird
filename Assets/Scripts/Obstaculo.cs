@@ -9,7 +9,11 @@ public class obstaculo : MonoBehaviour
     [SerializeField]
     private float variaçãoPosiçãoY;
 
+    private bool pontuei;
+
     private Vector3 posicaoPassaro;
+
+    private UiController uicontroller;
 
     // Update is called once per frame
     private void Awake()
@@ -20,17 +24,17 @@ public class obstaculo : MonoBehaviour
     private void Start()
     {
         this.posicaoPassaro = GameObject.FindObjectOfType<passaro>().transform.position;
-        if(!this.pontuei && this.transform.position.x < this.posicaoPassaro.x)
-        {
-            Debug.Log("Pontuou!");
-            this.pontuei = true;
-        }
+        this.uicontroller = GameObject.FindObjectOfType<UiController>();
     }
 
     void Update()
     {
         this.transform.Translate(Vector3.left * velocidade * Time.deltaTime);
-
+        if (!this.pontuei && this.transform.position.x < this.posicaoPassaro.x)
+        {
+            this.uicontroller.adicionarPonto();
+            this.pontuei = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

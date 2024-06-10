@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: initial; background-color: rgb(46, 60, 236); -unity-background-image-tint-color: rgb(56, 56, 56); width: 50px; height: 50px; align-items: center; justify-content: center; align-self: center; margin-top: 25px;">
+        <ui:Label tabindex="0" text="0" display-tooltip-when-elided="true" name="Pontos" style="width: 10px; height: 10px; align-items: center; justify-content: center; align-self: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-basis: auto;" />
+    </ui:VisualElement>
+</ui:UXML>
