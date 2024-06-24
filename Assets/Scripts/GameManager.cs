@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    private Passaro passaro;
+
     [SerializeField]
     private GameObject gameOverCanvas;
 
@@ -28,5 +30,12 @@ public class GameManager : MonoBehaviour
     public void RestardGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(ResetPlayerAfterRestart());
+    }
+    private IEnumerator ResetPlayerAfterRestart()
+    {
+        yield return new WaitForSeconds(0.1f); // Pequeno atraso para garantir que a cena seja recarregada
+        passaro = FindObjectOfType<Passaro>();
+        passaro.ResetPlayer();
     }
 }

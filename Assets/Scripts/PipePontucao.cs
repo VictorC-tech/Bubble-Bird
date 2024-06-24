@@ -10,6 +10,7 @@ public class PipePontucao : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Pontuacao.instance.UpdatePontuacao();
+         
         }
     }
 }
