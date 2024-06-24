@@ -1,27 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class passaro : MonoBehaviour
+public class Passaro : MonoBehaviour
 {
-    Rigidbody2D fisica;
-    private float velocidade = 3;
+    [SerializeField]
+    private float velocidade = 1.6f;
 
-    private void Awake()
+    [SerializeField]
+    private float rotacao = 10f;
+
+    private Rigidbody2D rb;
+
+    void Start()
     {
-        this.fisica = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            this.Impulsionar();
+            rb.velocity = Vector2.up * velocidade;
         }
     }
-    void Impulsionar()
+
+    private void FixedUpdate()
     {
-        this.fisica.AddForce(Vector2.up * velocidade, ForceMode2D.Impulse);
+        transform.rotation = Quaternion.Euler(0,0, rb.velocity.y * rotacao);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameManager.instance.GameOver();
     }
 }
