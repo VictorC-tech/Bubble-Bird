@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="tela" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Sprites/BG.png?fileID=2800000&amp;guid=305ef5483234a144197ee20bea1f659e&amp;type=3#BG&apos;); width: auto; height: auto;">
+        <ui:VisualElement name="title" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100px; align-items: center; justify-content: center;">
+            <ui:Label tabindex="-1" text="Bubble Bird" display-tooltip-when-elided="true" name="titulo" style="-unity-font-definition: initial; -unity-font: url(&apos;project://database/Assets/Fontes/Exo2-VariableFont_wght.ttf?fileID=12800000&amp;guid=565301f87d06be846b2ca7fbcaf33813&amp;type=3#Exo2-VariableFont_wght&apos;); -unity-font-style: bold; font-size: 30px; padding-bottom: 70px; color: rgb(6, 116, 255);" />
+            <ui:Button text="Jogar" display-tooltip-when-elided="true" name="btnJogar" class="button" style="-unity-font: url(&apos;project://database/Assets/Fontes/Exo2-VariableFont_wght.ttf?fileID=12800000&amp;guid=565301f87d06be846b2ca7fbcaf33813&amp;type=3#Exo2-VariableFont_wght&apos;); -unity-font-definition: initial; -unity-font-style: bold; font-size: 20px; width: 150px; height: 50px; background-color: rgb(6, 116, 255); color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
